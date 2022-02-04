@@ -1,21 +1,20 @@
 // IMPORT MODULES under test here:
-import { renderFighter } from './utils.js';
+import { renderPlayer } from '../utils.js';
 
 const test = QUnit.test;
 
-test('renderFighter will display a fighter name and HP', (expect) => {
+test('renderPlayer will display a fighter name and HP', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<div>5u3e75u6syw4</div>`;
+    const expected = `<div></div>`
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = renderFighter ('fighter');
-});
-
-    
+    const actual = renderPlayer { id: 1, name: ' Snooki', hp: 1 }, 
+    { id: 2, name: 'Thanos', hp: 2 },
+];
 
     //Expect
     // Make assertions about what is expected versus the actual result
-    expect.equal(actual.outerHTML, expected);
-
+    expect.equal(actual.outer, expected);
+});

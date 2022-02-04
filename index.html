@@ -14,9 +14,7 @@
 
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="./assets/big-logo.png" />
-        </div>
+        
     </header>
     <main>
         <section class="main-section">
@@ -26,13 +24,15 @@
                
         </section>
 <div class="character-stats">
-    <div class="defeated-fighter">
-        <p>You have defeated <span id="defeated-number">0</span> Fighter</p>
+    <div class="defeated-players">
+        <p>You have defeated <span id="defeated-number">0</span> Players</p>
         <div class="defeated-list>"></div>
         </div>
 
         <div class="character">
-    <p>Your HP<span id="character-hp">2</span>
+    <p>
+        Your HP:
+        <span id="character-hp">2</span>
     </p>
     <img id="character-img" src="./assets/player1.png"/>
 </div>
@@ -41,15 +41,16 @@
 <div></div>
 
 
-<div class="fighter-stats">
+<div class="player-stats">
     <div>
-    <form>Register Fighter
-        <input name="fighter-name"/>
-        <button>Attack Fighter
+    <form id="player-form">Register Fighter
+        <input name="player-name"/>
+        <button>
+            Begin Game!
         </button>
-    
     </form>
-<div class="fighters"></div>
+    
+<div class="players"></div>
 </div>
 </div>
     </main>

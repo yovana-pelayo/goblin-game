@@ -1,23 +1,26 @@
-export function renderFighter(fighterData) {
-    const fighterEl = document.createElement('div');
-    const faceEl = document.createElement('p');
-    const hpEl = document.createElement('p');
+export function renderPlayer(playerData) {
+    const playerEl = document.createElement('div');
     const nameEl = document.createElement('p');
+    const hpEl = document.createElement('p');
+    const imgEl = document.createElement('img');
 
-    fighterEl.classList.add('fighter');
+    playerEl.classList.add('player');
 
-    nameEl.textContent = fighterData.name;
-    hpEl.id = `fighter-hp-${fighterData.id}`;
-    hpEl.textContent = fighterData.hp < 0; 
 
-    faceEl.id = `fighter-face-${fighterData.id}`;
-    faceEl.textContent = fighterData.hp < 0; 
 
-    if (fighterData.hp < 0) {
-        fighterEl.classList.add('dead');
+    nameEl.textContent = playerData.name;
+    hpEl.id = `player-hp-${playerData.id}`;
+    hpEl.textContent = playerData.hp < 0 ? 0 : playerData.hp;
+
+    imgEl.id = `player-img-${playerData.id}`;
+    imgEl.textContent = playerData.hp > 0 ? '🐷' : '⚰️';
+
+    if (playerEl.hp < 0) {
+        playerEl.classList.add('dead');
     
     }
-    fighterEl.append(nameEl, faceEl, hpEl);
-    
-    return fighterEl;
+
+    playerEl.append(nameEl, imgEl, hpEl);
+
+    return playerEl;
 }

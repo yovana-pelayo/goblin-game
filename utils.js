@@ -1,10 +1,10 @@
 export function renderPlayer(playerData) {
     const playerEl = document.createElement('div');
-    const nameEl = document.createElement('p');
+    const nameEl = document.createElement('div');
     const hpEl = document.createElement('p');
-    const imgEl = document.createElement('img');
+    const imgEl = document.createElement('p');
 
-    playerEl.classList.add('players');
+    playerEl.classList.add('player');
 
 
 

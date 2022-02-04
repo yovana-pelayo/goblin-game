@@ -73,6 +73,7 @@ function playerClickHandler(playerData){
 
     }
     characterHpEl.textContent = characterHp;
+    
     const playerHpEl = document.getElementById(`player-hp-${playerData.id}`);
     playerHpEl.textContent = playerData.hp;
 

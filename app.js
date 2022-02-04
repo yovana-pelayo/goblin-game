@@ -5,6 +5,7 @@ const characterHpEl = document.querySelector('#character-hp');
 const characterImgEl = document.querySelector('#character-img');
 const formP = document.querySelector('#player-form');
 const playerListEl = document.querySelector('.players');
+// const defeatedPlayer = document.querySelector('defeated-player');
 
 // let state   this is given on out page
 let defeatedPlayerCount = 0;

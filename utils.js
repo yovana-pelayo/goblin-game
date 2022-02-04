@@ -4,7 +4,7 @@ export function renderPlayer(playerData) {
     const hpEl = document.createElement('p');
     const imgEl = document.createElement('img');
 
-    playerEl.classList.add('player');
+    playerEl.classList.add('players');
 
 
 

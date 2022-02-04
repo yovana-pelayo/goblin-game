@@ -8,9 +8,9 @@ const playerListEl = document.querySelector('.players');
 
 // let state   this is given on out page
 let defeatedPlayerCount = 0;
-let playerHp = 1;
+let characterHp = 5;
 let players = [
-    { id: 1, name: ' Snooki', hp: 1 }, 
+    { id: 1, name: ' Snooki', hp: 2 }, 
     { id: 2, name: 'Thanos', hp: 2 },
 ];
 let currentId = 3;
@@ -56,22 +56,22 @@ function playerClickHandler(playerData){
     // console.log('iam click handler');
 
     if (playerData.hp <= 0) return;
-    if (Math.random() < 1){
+    if (Math.random() < 0.5){
         alert(`you got hit${playerData.name}!`);
         playerData.hp--;
     } else {
         alert('You Missed!');
     } 
 
-    if (Math.random() < 1) {
-        playerData.hp--;
+    if (Math.random() < .5) {
+        characterHp--;
         alert('You got hit!');
 
     } else {
         alert(`${playerData.name} missed!`);
 
     }
-    characterHpEl.textContent = playerHp;
+    characterHpEl.textContent = characterHp;
     const playerHpEl = document.getElementById(`player-hp-${playerData.id}`);
     playerHpEl.textContent = playerData.hp;
 
@@ -83,7 +83,7 @@ function playerClickHandler(playerData){
         defeatedPlayerCount++;
         defeatedNumEl.textContent = defeatedPlayerCount;
     }
-    if (playerHp === 0) {
+    if (characterHp === 0) {
         characterImgEl.classList.add('game-over');
         alert('***GAME OVER***'); 
     }

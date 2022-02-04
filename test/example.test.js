@@ -6,7 +6,8 @@ const test = QUnit.test;
 test('renderPlayer will display a fighter name and HP', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<div class="players"><p> Snooki</p><img id="player-img-1"><p id="player-hp-1">2</p></div>`;
+    const expected = 
+`<div class="players"><div> Snooki</div><p id="player-img-1">🐷</p><p id="player-hp-1">1</p></div>`;
     
     //Act 
     // Call the function you're testing and set the result to a const

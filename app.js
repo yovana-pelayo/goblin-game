@@ -9,7 +9,7 @@ const playerListEl = document.querySelector('.players');
 
 // let state   this is given on out page
 let defeatedPlayerCount = 0;
-let characterHp = 5;
+let characterHp = 1;
 let players = [
     { id: 1, name: ' Snooki', hp: 2 }, 
     { id: 2, name: 'Thanos', hp: 2 },
@@ -31,7 +31,7 @@ formP.addEventListener('submit', (e) => {
         name: playerName,
         hp: Math.ceil(Math.random() * 5),
     };
-//     //added new object newFighter to the array 0f fighters in state
+//     //added new object newPlayer to the array 0f players in state (means it will appear on screen)
     players.push(newPlayer);
     displayPlayers();
 });
@@ -40,12 +40,13 @@ formP.addEventListener('submit', (e) => {
 function displayPlayers() {
     playerListEl.textContent = '';
 
- //loop thru the fighters
+ //loop thru the players
     for (let player of players) {
         const playerEl = renderPlayer(player);
 
         playerEl.addEventListener('click', () => {
             playerClickHandler(player);
+        
         });
         playerListEl.append(playerEl);
 //         //adding event listener b4 we put on page
@@ -73,7 +74,7 @@ function playerClickHandler(playerData){
 
     }
     characterHpEl.textContent = characterHp;
-    
+
     const playerHpEl = document.getElementById(`player-hp-${playerData.id}`);
     playerHpEl.textContent = playerData.hp;
 
@@ -87,8 +88,8 @@ function playerClickHandler(playerData){
     }
     if (characterHp === 0) {
         characterImgEl.classList.add('game-over');
-        alert('***GAME OVER***'); 
+        alert('***💀💀💀GAME OVER💀💀💀***'); 
     }
     const allDead = players.every((player) => player.hp === 0);
-    if (allDead) alert('WINNER');
+    if (allDead) alert('💸💸💸YOU ARE THE WINNER!!💸💸💸');
 }

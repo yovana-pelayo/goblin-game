@@ -4,7 +4,7 @@ export function renderPlayer(playerData) {
     const hpEl = document.createElement('p');
     const imgEl = document.createElement('p');
 
-    playerEl.classList.add('player');
+    playerEl.classList.add('players');
 
 
 
@@ -14,9 +14,10 @@ export function renderPlayer(playerData) {
 
     imgEl.id = `player-img-${playerData.id}`;
     imgEl.textContent = playerData.hp > 0 ? '🐷' : '⚰️';
+// if player dies then coffin emoji pops up. piggy while still playing/has hp
 
     if (playerEl.hp < 0) {
-        playerEl.classList.add('dead');
+        playerEl.classList.add('death');
     
     }
 

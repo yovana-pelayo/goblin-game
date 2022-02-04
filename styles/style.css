@@ -6,7 +6,7 @@ body {
     --color2: white;
     --color3: white;
     --color4: white;
-    --color5: white;
+    --color5: rgb(34, 121, 73);
     
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
         
@@ -33,7 +33,7 @@ body {
 
 main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
@@ -41,6 +41,8 @@ main {
 
 section {
     background-color: var(--color5);
+    color: yellow;
+    text-shadow: 2cm;
     max-width: 80%;
     display: flex;
     flex-direction: column;
@@ -55,10 +57,13 @@ section {
 
 header {
     display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
+    justify-content:center;
+    color: yellow;  
+    font-size: 3em;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: forestgreen;
     height: var(--header-height);
-    box-shadow: var(--shadow);
+    box-shadow: black;
 }
 
 
@@ -76,7 +81,14 @@ header img {
 }
 
 p {
+
     margin: var(--gutter);
+}
+.character p{
+    text-align: center;
+    border: double;
+    border-radius: 2em;
+    background-color: yellow;
 }
   
 footer {
@@ -88,4 +100,10 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+.players {
+    border: solid;
+background-color: green;
+color: yellow;
 }
